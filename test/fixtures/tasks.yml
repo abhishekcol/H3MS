@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  taskname: MyString
+  taskinotherlanguage: MyString
+  taskdesc: MyString
+  shortname: MyString
+  complexitylvl: 1
+  taskpriority: 1
+  gender: 1
+  asset: 1
+
+two:
+  taskname: MyString
+  taskinotherlanguage: MyString
+  taskdesc: MyString
+  shortname: MyString
+  complexitylvl: 1
+  taskpriority: 1
+  gender: 1
+  asset: 1

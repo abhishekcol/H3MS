@@ -1,0 +1,50 @@
+<%= form_for @shift, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :shift_Name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :shiftname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :short_code, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :shortcode, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :color_code, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.color_field :colorcode, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :shift_time, :class => 'control-label ' %>
+    <div class="controls bootstrap-timepicker timepicker " style="float: left;margin-left: 20px !important;">
+      <%= f.time_field :shiftstarttime, :class => ' text_field time_field form-control input-small', :id => 'timepicker1' %> to</div>
+       <div class="controls bootstrap-timepicker timepicker " style="float: left;margin-left: 5px !important;">
+      <%= f.time_field :shiftendtime, :class => 'text_field time_field form-control input-small', :id => 'timepicker2' %>
+    </div>
+  </div>
+
+  <div class="control-group" >
+    <%= f.label :mealstarttime, :class => 'control-label' %>
+    <div class="controls bootstrap-timepicker timepicker" style="float: left;margin-left: 20px !important;">
+      <%= f.time_field :mealstarttime, :class => 'text_field time_field form-control input-small', :id => 'timepicker3'%> to </div>
+	<div class="controls bootstrap-timepicker timepicker" style="float:left;margin-left: 5px !important;">
+      <%= f.time_field :mealendtime, :class => 'text_field time_field form-control input-small', :id => 'timepicker4' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                shifts_path, :class => 'btn' %>
+  </div>
+<% end %>
+
+<script>
+            $('#timepicker1').timepicker()
+            $('#timepicker2').timepicker()
+            $('#timepicker3').timepicker()
+            $('#timepicker4').timepicker()
+        </script>

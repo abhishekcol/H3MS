@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shiftname: MyString
+  shortcode: MyString
+  colorcode: MyString
+  shiftstarttime: 2014-09-25 17:46:40
+  shiftendtime: 2014-09-25 17:46:40
+  mealstarttime: 2014-09-25 17:46:40
+  mealendtime: 2014-09-25 17:46:40
+
+two:
+  shiftname: MyString
+  shortcode: MyString
+  colorcode: MyString
+  shiftstarttime: 2014-09-25 17:46:40
+  shiftendtime: 2014-09-25 17:46:40
+  mealstarttime: 2014-09-25 17:46:40
+  mealendtime: 2014-09-25 17:46:40

@@ -1,0 +1,57 @@
+<%= form_for @task, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :task_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :taskname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :task_in_other_language, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :taskinotherlanguage, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :task_desc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :taskdesc, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :short_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :shortname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :complexity_level, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :complexitylvl, Complexitylevel.all.collect{|p|[p.complexitylevel, p.id]}, :prompt => "Select Compexity Level",:class => 'dropdown' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :task_priority, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :taskpriority, Taskpriority.all.collect{|p|[p.priority, p.id]}, :prompt => "Select Task Priority",:class => 'dropdown' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :gender, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :gender_id, Gender.all.collect{|p|[p.name, p.id]}, :prompt => "Select Gender" ,:class => 'dropdown' %>	
+     	
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :asset, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :asset, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                tasks_path, :class => 'btn' %>
+  </div>
+<% end %>
